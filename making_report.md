@@ -31,3 +31,11 @@ GitHub can display HTML pages and render it like a simple website. For those who
 
 You can set your `master` branch, or any other branch, as the one you tell GitHub to render as a webpage. Let's stick with the `master` branch for now.
 * [GitHub pages docs](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+*  Convert the notebook to HTML: `jupyter nbconvert --to html --no-input --no-prompt my-notebook.ipynb`
+    * Make sure you set up your file path correctly! For organization, our notebooks are in the `notebooks` folder, so your file path might be `notebooks/3-make-report.ipynb`. 
+* A successful conversion will result in a file called `my-notebook.html` to be created.
+* Add this file in our commit: `git add my-notebook.html`
+* Add commit message: `git commit -m "Add report"`
+* Push changes to remote: `git push origin my-branch-name`
+* Make a pull request and merge in `my-branch-name` to the `master` branch.
+* View your HTML page as a "website": navigate to `https://YOUR-USERNAME.github.io/simple-coronavirus-report/my-notebook.html`
