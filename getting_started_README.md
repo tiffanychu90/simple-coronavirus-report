@@ -57,9 +57,9 @@ Some options:
 
 ## Step 2: Fork the Repo
 
-One group member  will [fork the repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo). This allows everyone in your group to make changes to the code and practice collaborating with one another.
+You will [fork the repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo). Forking the repo makes a personal copy of the repo.
 
-Once the repo is forked, everyone needs to clone the repo to their local computer. This moves it over from what you see remotely, or on the GitHub website, to a folder sitting on your local computer. You'll be able to make changes to the notebook.
+Once the repo is forked, you need to clone the repo. This moves it over from what you see remotely, or on the GitHub website, to a folder sitting on your local computer. You'll be able to make changes to the notebook.
 
 ## Step 3: Change into your current directory
 
@@ -77,7 +77,7 @@ In Ubuntu:
 * Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
 ## Collaborate and Use Version Control
-One major learning objective of this workshop is to learn how to write code in a collaborative setting. Version control is super important for this. GitHub can facilitate this collaborative workflow.
+One major learning objective of this workshop is to learn how to write code in a collaborative setting. Version control is super important for this. GitHub can facilitate this collaborative workflow. For this workshop, you'll learn to collaborate with yourself (a past version of you collaborating with a future version of you). You'll apply all these best practices, but we'll strip away some of the more advanced GitHub workflows that come with collaborative work, as that isn't the focus for now.
 
 As mentioned in the [GitHub](#github) section, the way for collaborators to stay in sync with their code is by pushing and pulling their code. 
 
@@ -98,3 +98,5 @@ In Ubuntu:
 * Commit the change by including a short commit message: `git commit -m "Exploratory analysis"`
 * Push the changes from local to the remote: `git push origin my-new-branch`
 * Go to the site: `https://github.com/YOUR-USERNAME/my-new-branch` and you should see your changes reflected there. 
+
+When all the work on the branch is done, you're ready to **merge** the branch in. On the GitHub website, you'll open a pull request, and take a look at the "summary" of all those changes, and merge! Merging it applies all those changes, the entire commit history, and tacks that onto the master branch. You'll pull from the master branch, and then checkout a new branch to go off on a new assignment, and repeat the cycle.
