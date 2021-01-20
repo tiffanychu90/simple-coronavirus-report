@@ -23,10 +23,15 @@ Project Organization
 
 Create a simpler version of what was done in the [City of LA covid19-indicators repo](https://github.com/CityOfLosAngeles/covid19-indicators). 
 
-Sample reports: 
-1. **CA COUNTIES REPORT:** [https://tinyurl.com/cacovidtrends](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)
+All the docs to guide you our workshop:
+* [Getting started](./getting_started.md)
+* [Making a report](./making_report.md)
+* [Other resources](./other_resources.md)
 
-1. **MAJOR US COUNTIES REPORT:** [https://tinyurl.com/uscountycovidtrends](https://cityoflosangeles.github.io/covid19-indicators/us-county-trends.html)
+Sample reports: 
+* **CA COUNTIES REPORT:** [https://tinyurl.com/cacovidtrends](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)
+
+* **MAJOR US COUNTIES REPORT:** [https://tinyurl.com/uscountycovidtrends](https://cityoflosangeles.github.io/covid19-indicators/us-county-trends.html)
 
 
 ## Table of Contents
@@ -35,7 +40,6 @@ Sample reports:
 1. [Helpful Hints for Jupyter Notebooks](#helpful-hints)
 1. [Setting up a Conda Environment](#setting-up-a-conda-environment)
 1. [Starting with Docker](#starting-with-docker)
-
 
 ## Data
 
