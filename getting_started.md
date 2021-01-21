@@ -66,9 +66,9 @@ Some options:
 
 Change into the directory where you want to store your GitHub repos (each individual repo will be its own folder). The `simple-coronavirus-report` repo will be one folder. But, if you ever do more projects, you'll set up a new GitHub repo for it, and you'll have many folders, reflecting each GitHub repo you've cloned, on your local computer. 
 
-You will [fork the repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo). Forking the repo makes a personal copy of the repo.
+You will [fork the repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo). Forking the repo makes a personal copy of the repo. You can do this in the browser on the GitHub webiste.
 
-Once the repo is forked, you need to clone the repo. This moves it over from what you see remotely, or on the GitHub website, to a folder sitting on your local computer. You'll be able to make changes to the notebook.
+Once the repo is forked, you need to clone the repo. This moves it over from what you see remotely, or on the GitHub website, to a folder sitting on your local computer. You'll be able to make changes to the notebook. We'll cover that in Steps 3-4 below.
 
 ## Step 3: Change into your current directory
 
@@ -88,8 +88,12 @@ In Ubuntu:
 
 ## Step 4: Clone the Repo
 
+Since you've forked the repo, you won't be using this repo, which is linked to my username. You should see a repo under `Your repositories` when you go to your GitHub page, which is `https://github.com/YOUR-USERNAME`.
+
 In Ubuntu: 
-* Clone the repo: `git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
+* Clone the repo: `git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`. 
+    * In the GitHub repo, you'll see a green button `Code`
+    * Click on the arrow > HTTPS > URL for GitHub repo
 * Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
 ## Step 5: Build the Docker Container
@@ -101,9 +105,13 @@ The relevant files in the repo to have this Docker container set up are: `Docker
 You can certainly do work without Docker, but if you plan on sharing code, others might not be able to run it (due to lack of packages or different package versions). It is best to have a Docker setup, but it's also a lot of work to set it up and maintain.
 
 In Ubuntu:
+* Change into the repo's directory (so far, we're in the GitHub folder): `cd simple-coronavirus-report` 
+* Once we're in this repo, we can run files within this repo, such as the files needed to build the Docker container.
 * Build the Docker container (only necessary for the first time): `docker-compose build`
 * Start Docker container: `docker-compose up` or `docker-compose.exe up`
 * Navigate to browser and open Jupyter Lab notebook by typing `localhost:8888/lab/` or `http://localhost:8888/rstudio` for RStudio.
     * ...DO ALL YOUR WORK LOCALLY....
-* When you're done for the day, stop Docker container: `docker-compose down`
+* When you're done for the day, `CTRL+C` to quit the Docker, then stop Docker container: `docker-compose down`
 * THe next time you want to do work, repeat the `docker-compose up`, open Jupyter Lab, then `docker-compose down`
+
+Back to [main README](./README.md), [GitHub Workflow](/.github_version_control.md), [Making a Report](./making_report.md) or [Other Resources](/.other_resources.md) 

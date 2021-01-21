@@ -24,9 +24,10 @@ Project Organization
 Create a simpler version of what was done in the [City of LA covid19-indicators repo](https://github.com/CityOfLosAngeles/covid19-indicators). 
 
 All the docs to guide you our workshop:
-* [Getting started](./getting_started.md)
-* [Making a report](./making_report.md)
-* [Other resources](./other_resources.md)
+* [Getting Started](./getting_started.md)
+* [GitHub workflow](./github_version_control.md)
+* [Making a Report](./making_report.md)
+* [Other Resources](./other_resources.md)
 
 Sample reports: 
 * **CA COUNTIES REPORT:** [https://tinyurl.com/cacovidtrends](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)

@@ -9,3 +9,5 @@ Here are other data science workshop curriculum materials.
     * [Past lessons (Jupyter Notebooks)](https://github.com/gboeing/ppd599/tree/2d037ea8b6213b6ce71196a74c8afb2f72415937)
 * UCLA ITS Data Camp: [https://github.com/ucla-its/ucla-its-data-camp-2019](https://github.com/ucla-its/ucla-its-data-camp-2019)
     * [git + GitHub slides](https://github.com/ucla-its/ucla-its-data-camp-2019/tree/master/Day4)
+    
+Back to [main README](./README.md), [Getting Started](./getting_started.md), [GitHub Workflow](/.github_version_control.md), or [Making a Report](./making_report.md)

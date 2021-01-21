@@ -1,6 +1,6 @@
 # GitHub Workflow
 
-We'll outline a very simple GitHub workflow here. 
+We'll outline a very simple GitHub workflow here. More on [Git/GitHub here](https://cityoflosangeles.github.io/best-practices/).
 
 ## Collaborate and Use Version Control
 One major learning objective of this workshop is to learn how to write code in a collaborative setting. Version control is super important for this. GitHub can facilitate this collaborative workflow. For this workshop, you'll learn to collaborate with yourself (a past version of you collaborating with a future version of you). You'll apply all these best practices, but we'll strip away some of the more advanced GitHub workflows that come with collaborative work, as that isn't the focus for now.
@@ -26,3 +26,5 @@ In Ubuntu:
 * Go to the site: `https://github.com/YOUR-USERNAME/my-new-branch` and you should see your changes reflected there. 
 
 When all the work on the branch is done, you're ready to **merge** the branch in. On the GitHub website, you'll open a pull request, and take a look at the "summary" of all those changes, and merge! Merging it applies all those changes, the entire commit history, and tacks that onto the master branch. You'll pull from the master branch, and then checkout a new branch to go off on a new assignment, and repeat the cycle.
+
+Back to [main README](./README.md), [Getting Started](/.getting_started.md), [Making a Report](./making_report.md), or [Other Resources](/.other_resources.md) 

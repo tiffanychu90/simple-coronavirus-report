@@ -39,3 +39,5 @@ You can set your `master` branch, or any other branch, as the one you tell GitHu
 * Push changes to remote: `git push origin my-branch-name`
 * Make a pull request and merge in `my-branch-name` to the `master` branch.
 * View your HTML page as a "website": navigate to `https://YOUR-USERNAME.github.io/simple-coronavirus-report/my-notebook.html`
+
+Back to [main README](./README.md), [Getting Started](./getting_started.md), [GitHub Workflow](/.github_version_control.md), or [Other Resources](/.other_resources.md) 
