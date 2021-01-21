@@ -13,7 +13,7 @@ One plus of Python (and R) over the proprietary software is that it can clean an
 
 The con of Python (and any other open source software) is that there are so many packages out there, they get updated and deprecated often, and one package update can break the functionality of other packages. Stata, SAS, SPSS, ESRI ArcGIS, would all bundle the supporting packages, so you never have to worry about that. It can be someone's full-time job to make sure the Python environment is stable for a team. We'll try and get around that by using Docker.
 
-## Step 1: Install Stuff
+## Step 1a: Install Programs
 
 1. [Ubuntu](#terminal): Terminal, command line interface
 1. [Docker](#docker) 
@@ -26,13 +26,19 @@ For Windows, visit the Microsoft Store, search "Ubuntu", and install it.
 
 For Macs, you can also install Ubuntu. If not, there might be some additional steps to get Docker to work.
 
+Once Ubuntu is installed:
+* Set a Unix username and password. When you type the password, it won't show up (but that's for security).
+* Type `sudo apt update`
+
 ### [Docker](#docker)
 
 Docker images are one way to create a standardized Python environment. Unlike proprietary software, such as Stata 14, Stata 15, each version of Stata is bundled with all the commands. With open source languages like Python and R, packages are constantly getting updated / deprecated. One way to get pretty close to a standardized environment in Python is to use a Docker image. 
 
-Download [Docker for Windows](https://docs.docker.com/docker-for-windows/release-notes/), download 2.5.0.1.
+Download [Docker for Windows](https://docs.docker.com/docker-for-windows/release-notes/), download 3.1.0.
 
-Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/), download 2.5.0.1.
+Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/), download 3.1.0.
+
+During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked.
 
 ### [GitHub](#github)
 
@@ -55,7 +61,10 @@ Some options:
 * [Atom](https://atom.io/)
 * [Sublime Text](https://www.sublimetext.com/). 
 
+
 ## Step 2: Fork the Repo
+
+Change into the directory where you want to store your GitHub repos (each individual repo will be its own folder). The `simple-coronavirus-report` repo will be one folder. But, if you ever do more projects, you'll set up a new GitHub repo for it, and you'll have many folders, reflecting each GitHub repo you've cloned, on your local computer. 
 
 You will [fork the repo](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo). Forking the repo makes a personal copy of the repo.
 
@@ -66,9 +75,16 @@ Once the repo is forked, you need to clone the repo. This moves it over from wha
 We're going to `clone` the GitHub repo, which means we're going to download a copy of the entire directory, all its sub-folders, all the files, etc onto our computer. But first, we need to know where we are.
 
 In Ubuntu:
-* Type `ls`
-* Find the file path of where you want to store your folder, maybe Documents, Desktop, etc. Pick one that is in the C:// drive on your local computer and not cloud storage like Google Drive (G://)
+* Type `cd /mnt/c/`
+* Type `ls` to see find out what the next directory / folder you can change into. 
+    * Find the file path of where you want to store your folder, maybe Documents, Desktop, etc. Pick one that is in the C:// drive on your local computer and not cloud storage like Google Drive (G://)
+    * If at any point you don't know what's the next folder you can get into, type `ls` and see the options.
 * Change into that directory: `cd /mnt/c/Users/Documents/GitHub/`. For me, I'm in my `Documents` folder, and within that, a sub-folder called `GitHub`.
+* We'll need to [set our GitHub credentials](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+) too (one time only):
+* `git config --global user.name MY_USERNAME`
+* `git config --global user.email MY_EMAIL`
+* Check that it's all set: `git config --list --show-origin`
 
 ## Step 4: Clone the Repo
 
@@ -76,27 +92,18 @@ In Ubuntu:
 * Clone the repo: `git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 * Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
-## Collaborate and Use Version Control
-One major learning objective of this workshop is to learn how to write code in a collaborative setting. Version control is super important for this. GitHub can facilitate this collaborative workflow. For this workshop, you'll learn to collaborate with yourself (a past version of you collaborating with a future version of you). You'll apply all these best practices, but we'll strip away some of the more advanced GitHub workflows that come with collaborative work, as that isn't the focus for now.
+## Step 5: Build the Docker Container
 
-As mentioned in the [GitHub](#github) section, the way for collaborators to stay in sync with their code is by pushing and pulling their code. You can upload a lot of different files to GitHub, ranging from code stored in text files (.py, .R, .do), Jupyter Notebooks (.ipynb), HTML files (.html, .md), datasets (.csv, .xlsx, .parquet, .zip, .geojson, etc), to images and reports (.pdf, .png, .jpg, etc). GitHub has some built-in functionality to display some of those, but not all of them, but it can certainly store all of them. Large datasets shouldn't be uploaded (>25MB via browser, >100MB via command line). 
+Now, we'll build the Docker container using the Docker image provided in the repo. Basically, a Docker container is a virtual machine, a virtual computer, and you'll install all your Python packages on that virtual machine. We'll do all on this virutal machine locally, which is how we can standardize the Python environment for everyone. That's how we make sure everyone has the same packages installed, the same package versions, etc.
 
-In GitHub, there's a `master` branch, the latest version of code that is ready to go for everyone. When you're working on an individual task, make sure you've pulled all the changes from the `master` branch, and then make a new branch to do your work. When you've finished the task, your new branch is ready to be **merged** into the master branch.
+The relevant files in the repo to have this Docker container set up are: `Dockerfile` and `docker-compose.yml`. 
 
-### Make new branch
-In Ubuntu:
-* Checkout the master branch: `git checkout master`
-* Pull all the latest changes in the master branch (make sure your local matches the remote): `git pull origin master`
-* Make a new branch to do your work: `git checkout -b my-new-branch`
-* ....DO ALL YOUR WORK LOCALLY....
-
-### Push changes to the remote
-When you've done some work locally, you want to save a version in the remote repo. Think of this as "saving" in your Word Doc, Google Doc, etc. With GitHub, you have explicitly "save" by **committing** the changes. Otherwise, your changes are saved locally only. Think of this as creating checkpoints in your code, and you can always revert back any versioned changes in the remote repo.
+You can certainly do work without Docker, but if you plan on sharing code, others might not be able to run it (due to lack of packages or different package versions). It is best to have a Docker setup, but it's also a lot of work to set it up and maintain.
 
 In Ubuntu:
-* Push your local changes to the remote: `git add notebooks/1-read-in-data.ipynb`. For multiple files, do `git add notebooks/1-read-in-data.ipynb utils.py`
-* Commit the change by including a short commit message: `git commit -m "Exploratory analysis"`
-* Push the changes from local to the remote: `git push origin my-new-branch`
-* Go to the site: `https://github.com/YOUR-USERNAME/my-new-branch` and you should see your changes reflected there. 
-
-When all the work on the branch is done, you're ready to **merge** the branch in. On the GitHub website, you'll open a pull request, and take a look at the "summary" of all those changes, and merge! Merging it applies all those changes, the entire commit history, and tacks that onto the master branch. You'll pull from the master branch, and then checkout a new branch to go off on a new assignment, and repeat the cycle.
+* Build the Docker container (only necessary for the first time): `docker-compose build`
+* Start Docker container: `docker-compose up` or `docker-compose.exe up`
+* Navigate to browser and open Jupyter Lab notebook by typing `localhost:8888/lab/` or `http://localhost:8888/rstudio` for RStudio.
+    * ...DO ALL YOUR WORK LOCALLY....
+* When you're done for the day, stop Docker container: `docker-compose down`
+* THe next time you want to do work, repeat the `docker-compose up`, open Jupyter Lab, then `docker-compose down`
