@@ -21,4 +21,4 @@ COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
 # Make sure vega-cli are available for altair export
-RUN npm install -g --unsafe --force vega vega-cli vega-lite canvas
+#RUN npm install -g --unsafe --force vega vega-cli vega-lite canvas
