@@ -20,5 +20,6 @@ RUN conda install --yes -c conda-forge --file /tmp/conda-requirements.txt
 COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
+# This might prevent Docker container from building, so let's comment it out
 # Make sure vega-cli are available for altair export
-RUN npm install -g --unsafe --force vega vega-cli vega-lite canvas
+#RUN npm install -g --unsafe --force vega vega-cli vega-lite canvas
