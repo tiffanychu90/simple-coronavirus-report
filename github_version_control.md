@@ -27,4 +27,4 @@ In Ubuntu:
 
 When all the work on the branch is done, you're ready to **merge** the branch in. On the GitHub website, you'll open a pull request, and take a look at the "summary" of all those changes, and merge! Merging it applies all those changes, the entire commit history, and tacks that onto the master branch. You'll pull from the master branch, and then checkout a new branch to go off on a new assignment, and repeat the cycle.
 
-Back to [main README](./README.md), [Getting Started](/.getting_started.md), [Making a Report](./making_report.md), or [Other Resources](/.other_resources.md) 
+Back to [main README](./README.md), [Getting Started](./getting_started.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](./other_resources.md) 

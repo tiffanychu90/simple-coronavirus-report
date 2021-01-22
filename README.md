@@ -25,8 +25,9 @@ Create a simpler version of what was done in the [City of LA covid19-indicators 
 
 All the docs to guide you our workshop:
 * [Getting Started](./getting_started.md)
-* [GitHub workflow](./github_version_control.md)
+* [GitHub Workflow](./github_version_control.md)
 * [Making a Report](./making_report.md)
+* [Data Pipeline](/.data_pipeline.md)
 * [Other Resources](./other_resources.md)
 
 Sample reports: 

@@ -20,7 +20,7 @@ The con of Python (and any other open source software) is that there are so many
 1. [GitHub](#github)
 1. Optional: [Text Editor](#text-editor)
 
-### [Terminal](#terminal)
+### Terminal
 
 For Windows, visit the Microsoft Store, search "Ubuntu", and install it.
 
@@ -30,7 +30,7 @@ Once Ubuntu is installed:
 * Set a Unix username and password. When you type the password, it won't show up (but that's for security).
 * Type `sudo apt update`
 
-### [Docker](#docker)
+### Docker
 
 Docker images are one way to create a standardized Python environment. Unlike proprietary software, such as Stata 14, Stata 15, each version of Stata is bundled with all the commands. With open source languages like Python and R, packages are constantly getting updated / deprecated. One way to get pretty close to a standardized environment in Python is to use a Docker image. 
 
@@ -40,7 +40,7 @@ Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/
 
 During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked.
 
-### [GitHub](#github)
+### GitHub
 
 Go to GitHub and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
 
@@ -50,7 +50,7 @@ With GitHub, there is the **local** and **remote** version of the repo.
 
 You will get used to make changes locally, then pushing those changes to the remote repo, so that it's reflected on the website. The way collaborators stay in sync is by pushing their changes to the remote, or by pulling their changes from the remote so that it's reflected locally.
 
-### [Text Editor](#text-editor)
+### Text Editor
 
 Optionally, a text editor can be installed. Most of our work will be done in Jupyter Notebooks, so a text editor isn't needed. Within our Docker setup, we'll have access a simple text editor.
 
@@ -59,7 +59,7 @@ Installing another text editor can make your life for writing or reading code, a
 Some options:
 * [Visual Studio Code](https://code.visualstudio.com/) 
 * [Atom](https://atom.io/)
-* [Sublime Text](https://www.sublimetext.com/). 
+* [Sublime Text](https://www.sublimetext.com/)
 
 
 ## Step 2: Fork the Repo
@@ -107,11 +107,13 @@ You can certainly do work without Docker, but if you plan on sharing code, other
 In Ubuntu:
 * Change into the repo's directory (so far, we're in the GitHub folder): `cd simple-coronavirus-report` 
 * Once we're in this repo, we can run files within this repo, such as the files needed to build the Docker container.
-* Build the Docker container (only necessary for the first time): `docker-compose build`
-* Start Docker container: `docker-compose up` or `docker-compose.exe up`
+* Build the Docker container (only necessary for the first time): `docker-compose.exe build`
+* Start Docker container: `docker-compose.exe up`
 * Navigate to browser and open Jupyter Lab notebook by typing `localhost:8888/lab/` or `http://localhost:8888/rstudio` for RStudio.
     * ...DO ALL YOUR WORK LOCALLY....
-* When you're done for the day, `CTRL+C` to quit the Docker, then stop Docker container: `docker-compose down`
-* THe next time you want to do work, repeat the `docker-compose up`, open Jupyter Lab, then `docker-compose down`
+* When you're done for the day, `CTRL+C` to stop the Docker container from running, then stop Docker container: `docker-compose.exe down`
+* THe next time you want to do work, repeat the `docker-compose.exe up`, open Jupyter Lab, then `docker-compose.exe down`
 
-Back to [main README](./README.md), [GitHub Workflow](/.github_version_control.md), [Making a Report](./making_report.md) or [Other Resources](/.other_resources.md) 
+<br>
+
+Back to [main README](./README.md), [GitHub Workflow](/.github_version_control.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](/.other_resources.md) 
