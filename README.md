@@ -27,7 +27,7 @@ All the docs to guide you our workshop:
 * [Getting Started](./getting_started.md)
 * [GitHub Workflow](./github_version_control.md)
 * [Making a Report](./making_report.md)
-* [Data Pipeline](/.data_pipeline.md)
+* [Data Pipeline](./data_pipeline.md)
 * [Other Resources](./other_resources.md)
 
 Sample reports: 

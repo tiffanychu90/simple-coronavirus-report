@@ -8,13 +8,13 @@ People are used to getting PDFs and people are used to looking at websites. Let'
 * [Jupyter Notebooks](#jupyter-notebooks)
 * [GitHub Pages](#github-pages)
 
-## [RMarkdown](#rmarkdown)
+## RMarkdown
 One familiar option you may have heard of is RMarkdown. Using RMarkdown, you might use `knitr` to knit the code and outputs into a Word doc, HTML doc, or PDF. 
 
 Our Docker image includes RStudio, and you are able to create an RMarkdown doc and knit that into HTML or PDF. If you know R/RStudio, you can use this option!
 
 
-## [Jupyter Notebooks](#jupyter-notebooks)
+## Jupyter Notebooks
 There is a similar functionality for Jupyter notebooks. Normally, to get PDFs, it requires LaTex, and other packages to support, which can get very complicated, very easily. Our Docker image has all of that installed, so converting to a PDF is fairly easy for us!
 
 Use the terminal within the Docker
@@ -25,7 +25,7 @@ Use the terminal within the Docker
     * [nbconvert docs on exporting](https://nbconvert.readthedocs.io/en/latest/config_options.html#exporter-options)
 * Convert the notebook into PDF: `jupyter nbconvert --to pdf --no-input --no-prompt my-notebook.ipynb`
 
-## [GitHub Pages](#github-pages)
+## GitHub Pages
 
 GitHub can display HTML pages and render it like a simple website. For those who don't want to venture into web programming, this is one way to get more functionality from the tools already at your disposal. People have used this to make their online portfolios or resumes.
 
