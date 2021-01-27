@@ -1,0 +1,130 @@
+---
+font: Lato
+fontsize: 10pt
+geometry: left=1in,right=1in,top=0.35in,bottom=0.6in
+header-includes: \input{preamble.tex}
+output:
+  pdf_document: default
+  word_document: default
+sansfont: Lato
+urlcolor: null
+---
+
+\raggedright
+
+```{r rmarkdown-setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(dev = "cairo_pdf")
+options(knitr.kable.NA = "")
+options(kableExtra.latex.load_packages = FALSE)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(scales)
+library(arrow)
+```
+
+\clatitle{This is the title}
+\clasubtitle{This is the subtitle}
+\claauthors{Author1, Author2}
+
+```{r import-data, echo=FALSE}
+us_county<-arrow::read_parquet("../data/us-county-time-series.parquet", as_tibble=TRUE)
+ca_hospitalizations<-read.csv("https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/ca-hospital-and-surge-capacity.csv")
+
+# Call parameters from our utils files
+source("../notebooks/r_utils.R")
+YESTERDAY_DATE <-YESTERDAY_DATE
+TWO_WEEKS_AGO <- TWO_WEEKS_AGO
+
+
+# Call parameters from utils files
+source("../notebooks/r_chart_utils.R")
+# Chart parameters
+NAVY<-NAVY
+MAROON<- MAROON
+LIGHT_GRAY<-LIGHT_GRAY
+```
+
+
+# Executive Summary
+
+Here's what this report is about.
+
+With some bullet points:
+
+* One
+* Two
+* Three
+
+
+Then some numbers:
+
+1. **Important finding 1**: one
+1. **Important finding 2**: two
+1. **Important finding 3**: three
+
+\contactinfo{}
+\newpage{}
+
+
+# Background
+
+**bold** or *italic* or just regular words
+
+
+# Methodology
+
+Stuff
+
+## Data Sources
+
+Here's our data sources, let's add a table with some formatting!
+
+\clatablenumber{1} 
+\clatabletitle{Data Sources}
+```{r data-sources, echo=FALSE}
+# Insert table for data sources
+
+text_table <- data.frame(
+  Data = c("Dataset1",
+           "Dataset2",
+           "Dataset3"
+           ),
+  Source = c(
+    "Source1",
+    "Source2",
+    "Source3" 
+  ), 
+  Years = c(
+    "2000-2020", 
+    "2000-2020",
+    "2000-2020"
+  )
+)
+
+kbl(text_table) %>%
+  kable_material(full_width = F) %>%
+  column_spec(1, width="5cm") %>%
+  column_spec(2, width = "4.5cm") %>%
+  column_spec(3, width = "1.75cm") %>%
+  kable_styling(fixed_thead=T, position="left")
+```
+\clasource{Census Bureau}
+
+
+# Analysis Findings
+
+
+
+# Conclusion
+
+
+
+
+
+
