@@ -1,3 +1,5 @@
+#install.packages(c("ggthemes", "plotly"))
+
 library(rmarkdown)
 library(stringr)
 library(tidyverse)
@@ -16,7 +18,7 @@ reports <- tibble(
 # iterate render() along the tibble of parameters and file names
 reports %>%
   select(output_file = filename, params) %>%
-  pwalk(rmarkdown::render, input = "notebooks/ca-report", 
+  pwalk(rmarkdown::render, input = "notebooks/A-county-charts.Rmd", 
         output_format = "pdf_document",
         output_dir = "reports")
 
@@ -29,13 +31,13 @@ html_reports <- tibble(
 
 html_reports %>%
   select(output_file = filename, params) %>%
-  pwalk(rmarkdown::render, input = "notebooks/county-charts-html.Rmd", 
+  pwalk(rmarkdown::render, input = "notebooks/B-county-charts-html.Rmd", 
         output_format = "html_document",
         output_dir = "reports")
 
 
 # Just render 1 report, don't need the pwalk
-rmarkdown::render(input = "notebooks/county-report.Rmd",
+rmarkdown::render(input = "notebooks/C-ca-report.Rmd",
                   output_format = "html_document",
                   output_dir = "reports", 
                   output_file = "county-report.html"
