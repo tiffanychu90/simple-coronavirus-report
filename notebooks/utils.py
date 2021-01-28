@@ -2,6 +2,7 @@
 Utility functions.
 Can be reused across multiple noteboks
 """
+import datetime
 import intake
 import pandas as pd
 
@@ -17,6 +18,16 @@ To use:
 useful_dict.us_state_abbrev 
 """
 import useful_dict
+
+# Define some default parameters to use across notebooks
+fulldate_format = "%-m/%-d/%y"
+time_zone = "US/Pacific"
+start_date = datetime.datetime(2020, 4, 15).date()
+two_weeks_ago = (
+    (datetime.date.today()
+        - datetime.timedelta(days=15)
+    )
+)
 
 
 # Calculate a 7-day rolling average
