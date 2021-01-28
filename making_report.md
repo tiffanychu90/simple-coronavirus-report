@@ -5,13 +5,22 @@ Jupyter Notebooks are a great way to do your data cleaning, data wrangling, and 
 People are used to getting PDFs and people are used to looking at websites. Let's explore a couple of options with the tools we already have. To do more, of course, you might have to pick up more web programming skills and additional languages (Javascript, CSS) to support your endeavors.
 
 * [RMarkdown](#rmarkdown)
+    * [Examples](#rmarkdown-examples)
 * [Jupyter Notebooks](#jupyter-notebooks)
+    * [Examples](#jupyter-notebook-examples)
 * [GitHub Pages](#github-pages)
 
 ## RMarkdown
 One familiar option you may have heard of is RMarkdown. Using RMarkdown, you might use `knitr` to knit the code and outputs into a Word doc, HTML doc, or PDF. 
 
 Our Docker image includes RStudio, and you are able to create an RMarkdown doc and knit that into HTML or PDF. If you know R/RStudio, you can use this option!
+
+### RMarkdown Examples
+All these examples use `knitr` function. The script to run is `notebooks/iterate.R`, and output files are created in the `report` directory.
+* [Charts + pdf](./notebooks/A-county-charts.Rmd) 
+* [Charts + html](./notebooks/B-county-charts-html.Rmd)
+* [Charts with loop + html](./notebooks/C-ca-report.Rmd)
+* [Sample pdf report](./notebooks/D-sample-report.Rmd)
 
 
 ## Jupyter Notebooks
@@ -24,6 +33,12 @@ Use the terminal within the Docker
     * `no-prompt`: do not display input and output prompts
     * [nbconvert docs on exporting](https://nbconvert.readthedocs.io/en/latest/config_options.html#exporter-options)
 * Convert the notebook into PDF: `jupyter nbconvert --to pdf --no-input --no-prompt my-notebook.ipynb`
+
+### Jupyter Notebook Examples
+
+These notebooks run with SCRIPT.py.
+Add our upload_to_github function.
+Create a report that uses loop.
 
 ## GitHub Pages
 
