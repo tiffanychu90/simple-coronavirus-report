@@ -49,9 +49,10 @@ We could plot cumulative cases, but there are so many other interesting metrics 
 We'll have to derive additional columns:
 * new cases (change from the prior day)
 * 7-day rolling average for cases, deaths, new cases, new deaths
-* per capita 
+* per capita cases or per capita new cases
 * doubling time 
 * severity
+* percent change
 
 ### Transforming Data
 
