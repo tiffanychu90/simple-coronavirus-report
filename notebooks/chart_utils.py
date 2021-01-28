@@ -10,8 +10,8 @@ import utils
 from IPython.display import display, SVG
 
 #alt.renderers.enable('altair_saver', fmts=['svg'])
-#alt.themes.enable("latimes")
-alt.themes.enable("fivethirtyeight")
+alt.themes.enable("latimes")
+#alt.themes.enable("fivethirtyeight")
 
 '''
 def show_svg(image_name):
