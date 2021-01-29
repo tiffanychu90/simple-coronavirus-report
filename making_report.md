@@ -18,10 +18,10 @@ Our Docker image includes RStudio, and you are able to create an RMarkdown doc a
 ### RMarkdown Examples
 All these examples use `knitr` function. The script to run is `notebooks/iterate.R`, and output files are created in the `report` directory.
 
-* Charts + pdf [code](./notebooks/A-county-charts.Rmd), [output 1](tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.pdf), [output 2](tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.pdf)
-* Charts + html [code](./notebooks/B-county-charts-html.Rmd), [output 1](tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.html), [output 2](tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.html)
-* Charts with loop + html [code](./notebooks/C-ca-report.Rmd), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/county-report.html)
-* Sample pdf report [code](./notebooks/D-sample-report.Rmd), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/sample-report.pdf)
+* Charts + pdf [code](./notebooks/A-county-charts.Rmd), [output 1](https://tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.pdf), [output 2](https://tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.pdf)
+* Charts + html [code](./notebooks/B-county-charts-html.Rmd), [output 1](https://tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.html), [output 2](https://tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.html)
+* Charts with loop + html [code](./notebooks/C-ca-report.Rmd), [output](https://tiffanychu90.github.io/simple-coronavirus-report/reports/county-report.html)
+* Sample pdf report [code](./notebooks/D-sample-report.Rmd), [output](https://tiffanychu90.github.io/simple-coronavirus-report/reports/sample-report.pdf)
 
 
 ## Jupyter Notebooks
@@ -45,7 +45,11 @@ Within the terminal inside Docker (Launcher > Terminal):
 * Change into the notebook directory: `cd notebooks`
 * Execute the Python script: `python report.py`
 
-* Full report [code](./notebooks/5-full-report.ipynb), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/full-report.html)
+Examples: 
+
+* Full report [code](./notebooks/5-full-report.ipynb), [output](https://tiffanychu90.github.io/simple-coronavirus-report/reports/full-report.html)
+* CA counties report [code](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/notebooks/ca-counties.ipynb) and [output](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)
+* US counties report [code](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/notebooks/us-counties.ipynb) and [output](https://cityoflosangeles.github.io/covid19-indicators/us-county-trends.html)
 
 
 ## GitHub Pages
