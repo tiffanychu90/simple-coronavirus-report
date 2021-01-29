@@ -2,25 +2,15 @@
 Functions to create charts.
 """
 import altair as alt
-#import altair_saver
 import os
 import pandas as pd
 import utils
 
 from IPython.display import display, SVG
 
-#alt.renderers.enable('altair_saver', fmts=['svg'])
 alt.themes.enable("latimes")
-#alt.themes.enable("fivethirtyeight")
 
-'''
-def show_svg(image_name):
-    image_path = f"../notebooks/{image_name}.svg"
-    altair_saver.save(image_name, image_path)
-    display(SVG(filename = image_path))
-    os.remove(image_path)
-'''    
-
+# Default parameters
 two_weeks_ago = utils.two_weeks_ago
 
 
@@ -93,6 +83,7 @@ def make_chart(df, county_name, start_date):
         )
         .configure_title(fontSize = 14, font = "Roboto",
                          color = "black", anchor = "middle")
-        )
+        ).configure(background="white")
+
     
     display(cases_chart)

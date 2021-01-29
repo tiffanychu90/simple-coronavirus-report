@@ -17,10 +17,11 @@ Our Docker image includes RStudio, and you are able to create an RMarkdown doc a
 
 ### RMarkdown Examples
 All these examples use `knitr` function. The script to run is `notebooks/iterate.R`, and output files are created in the `report` directory.
-* [Charts + pdf](./notebooks/A-county-charts.Rmd) 
-* [Charts + html](./notebooks/B-county-charts-html.Rmd)
-* [Charts with loop + html](./notebooks/C-ca-report.Rmd)
-* [Sample pdf report](./notebooks/D-sample-report.Rmd)
+
+* Charts + pdf [code](./notebooks/A-county-charts.Rmd), [output 1](tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.pdf), [output 2](tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.pdf)
+* Charts + html [code](./notebooks/B-county-charts-html.Rmd), [output 1](tiffanychu90.github.io/simple-coronavirus-report/reports/Alameda.html), [output 2](tiffanychu90.github.io/simple-coronavirus-report/reports/Los%20Angeles.html)
+* Charts with loop + html [code](./notebooks/C-ca-report.Rmd), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/county-report.html)
+* Sample pdf report [code](./notebooks/D-sample-report.Rmd), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/sample-report.pdf)
 
 
 ## Jupyter Notebooks
@@ -36,9 +37,15 @@ Use the terminal within the Docker
 
 ### Jupyter Notebook Examples
 
-These notebooks run with SCRIPT.py.
-Add our upload_to_github function.
-Create a report that uses loop.
+Similar to the `iterate.R`, there is a `report.py` that is a script that can be run in the terminal.
+
+There `report.py` uses `papermill` to execute a notebook, convert it to HTML, then relies on `automate.py` for a function to upload to GitHub pages. 
+
+Within the terminal inside Docker (Launcher > Terminal):
+* Change into the notebook directory: `cd notebooks`
+* Execute the Python script: `python report.py`
+
+* Full report [code](./notebooks/5-full-report.ipynb), [output](tiffanychu90.github.io/simple-coronavirus-report/reports/full-report.html)
 
 ## GitHub Pages
 
