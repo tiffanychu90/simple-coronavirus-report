@@ -13,7 +13,17 @@ One plus of Python (and R) over the proprietary software is that it can clean an
 
 The con of Python (and any other open source software) is that there are so many packages out there, they get updated and deprecated often, and one package update can break the functionality of other packages. Stata, SAS, SPSS, ESRI ArcGIS, would all bundle the supporting packages, so you never have to worry about that. It can be someone's full-time job to make sure the Python environment is stable for a team. We'll try and get around that by using Docker.
 
-## Step 1a: Install Programs
+Go through step-by-step to get set up!
+
+1. [Step 1: Install Programs](#step-1-install-programs)
+1. [Step 2: Fork the Repo](#step-2-fork-the-repo)
+1. [Step 3: Change into your current directory](#step-3-change-into-your-current-directory)
+1. [Step 4: Clone the Repo](#step-4-clone-the-repo)
+1. [Step 5: Build the Docker Container](#step-5-build-the-docker-container)
+
+<br>
+
+## Step 1: Install Programs
 
 1. [Ubuntu](#terminal): Terminal, command line interface
 1. [Docker](#docker) 
@@ -38,11 +48,11 @@ Download [Docker for Windows](https://docs.docker.com/docker-for-windows/release
 
 Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/), download 3.1.0.
 
-During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked.
+During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked. You do not need to create a login with Docker to use it.
 
 ### GitHub
 
-Go to GitHub and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
+Go to [GitHub](https://github.com/) and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
 
 With GitHub, there is the **local** and **remote** version of the repo. 
 * Local: the entire repo, its folders, files that's on your computer
@@ -54,7 +64,7 @@ You will get used to make changes locally, then pushing those changes to the rem
 
 Optionally, a text editor can be installed. Most of our work will be done in Jupyter Notebooks, so a text editor isn't needed. Within our Docker setup, we'll have access a simple text editor.
 
-Installing another text editor can make your life for writing or reading code, as it provides built-in formatting or highlighting. When you're writing Python scripts (.py), Markdown (.md), YAML files (.yml), having a more advanced text editor may make your life easier. 
+Installing another text editor can make your life easier for writing or reading code, as it provides built-in formatting or highlighting. When you're writing Python scripts (.py), Markdown (.md), YAML files (.yml), you might want to have a more advanced text editor handy. 
 
 Some options:
 * [Visual Studio Code](https://code.visualstudio.com/) 
@@ -116,4 +126,4 @@ In Ubuntu:
 
 <br>
 
-Back to [main README](./README.md), [GitHub Workflow](/.github_version_control.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](/.other_resources.md) 
+Back to [main README](./README.md), [GitHub Workflow](./github_version_control.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](./other_resources.md) 
