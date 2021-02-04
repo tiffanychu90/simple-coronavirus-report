@@ -50,6 +50,14 @@ Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/
 
 During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked. You do not need to create a login with Docker to use it.
 
+
+Once it's downloaded, start your Docker and we'll change some settings.
+
+* Right click > Settings > Resources 
+    * WSL Integration: uncheck `Enable integration with my default WSL distro` but check `Enable integration with additional distros` for Ubuntu.
+    * Experimental Features: turn off `Enable cloud experience`
+* Restart Docker
+
 ### GitHub
 
 Go to [GitHub](https://github.com/) and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
@@ -104,6 +112,8 @@ In Ubuntu:
 * Clone the repo: `git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`. 
     * In the GitHub repo, you'll see a green button `Code`
     * Click on the arrow > HTTPS > URL for GitHub repo
+    * If you get a `Git init: fatal: could not set 'core.filemode' to 'false'` error, try it with a "sudo" in front: `sudo git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
+        * [Debugging error references](./install_errors.md)
 * Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
 ## Step 5: Build the Docker Container
