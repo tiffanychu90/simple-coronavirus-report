@@ -39,11 +39,13 @@ Use the terminal within the Docker
 
 Similar to the `iterate.R`, there is a `report.py` that is a script that can be run in the terminal.
 
-There `report.py` uses `papermill` to execute a notebook, convert it to HTML, then relies on `automate.py` for a function to upload to GitHub pages. 
+There `report.py` uses `papermill` to execute a notebook, convert it to HTML, then relies on `automate.py` for a function to upload to GitHub pages. You may need credentials to upload to GitHub pages automatically; uploading by checking in the HTML or pdf will not require additional credentials (refer back to [Getting Started - Credentials](./getting_started.md#step-6-add-credentials)). 
+
 
 Within the terminal inside Docker (Launcher > Terminal):
 * Change into the notebook directory: `cd notebooks`
 * Execute the Python script: `python report.py`
+    * Within `report.py`, the line `TOKEN = os.environ["GITHUB_TOKEN_PASSWORD"]` is where it accesses the token without displaying it for everyone to see.
 
 Examples: 
 
@@ -66,6 +68,13 @@ You can set your `master` branch, or any other branch, as the one you tell GitHu
 * Push changes to remote: `git push origin my-branch-name`
 * Make a pull request and merge in `my-branch-name` to the `master` branch.
 * View your HTML page as a "website": navigate to `https://YOUR-USERNAME.github.io/simple-coronavirus-report/my-notebook.html`
+
+You might need a GitHub personal access token for some of the functionalities, such as uploading files within a script rather than adding/committing yourself.
+
+Getting a GitHub personal access token:
+* On GitHub website: Settings > Developer Settings (left tab) > Personal Access Tokens > Generate a New Token
+    * Check off all functionalities except `delete_repo` and `admin:enterprise`.
+    * Copy and save that token somewhere! It's long and a bunch of scrambled letters/numbers.
 
 <br>
 

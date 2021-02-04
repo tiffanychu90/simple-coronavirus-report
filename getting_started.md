@@ -20,6 +20,7 @@ Go through step-by-step to get set up!
 1. [Step 3: Change into your current directory](#step-3-change-into-your-current-directory)
 1. [Step 4: Clone the Repo](#step-4-clone-the-repo)
 1. [Step 5: Build the Docker Container](#step-5-build-the-docker-container)
+1. [Step 6: Add Credentials](#step-6-add-credentials)
 
 <br>
 
@@ -159,6 +160,37 @@ In Ubuntu:
     * ...DO ALL YOUR WORK LOCALLY....
 * When you're done for the day, `CTRL+C` to stop the Docker container from running, then stop Docker container: `docker-compose.exe down`
 * THe next time you want to do work, repeat the `docker-compose.exe up`, open Jupyter Lab, then `docker-compose.exe down`
+
+
+## Step 6: Add Credentials
+
+Optional step!
+
+The best practice is to hide your credentials, but have them in a place where you can access them within a notebook without hard-coding it. One way to do this is with .env files. The .env file will not get checked into the GitHub repo, so when you clone/fork, you're not transferring passwords, but you will have to create one for yourself.
+
+There is 1 case where we use a GitHub personal access token to upload a file directly to GitHub using the GitHub API. You can still create a report and upload the file through the the `git add`, `git commit`, and `git push` process without the token. But just in case...
+
+Add a .env file (you'll have to use VSCode or another text editor to be able to see the file) with these contents: 
+
+```
+# Environment variables go here, can be read by `python-dotenv` package:
+#
+#   `src/script.py`
+#   ----------------------------------------------------------------
+#    import dotenv
+#
+#    project_dir = os.path.join(os.path.dirname(__file__), os.pardir)
+#    dotenv_path = os.path.join(project_dir, '.env')
+#    dotenv.load_dotenv(dotenv_path)
+#   ----------------------------------------------------------------
+#
+# DO NOT ADD THIS FILE TO VERSION CONTROL!
+
+#Personal Access Key for simple-coronavirus-report
+GITHUB_TOKEN_PASSWORD=000000111111111111222222222AAAAABBBBCCC
+
+# Any other passwords can be pasted here
+```
 
 <br>
 
