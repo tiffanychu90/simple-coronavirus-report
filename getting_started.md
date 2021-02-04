@@ -13,7 +13,17 @@ One plus of Python (and R) over the proprietary software is that it can clean an
 
 The con of Python (and any other open source software) is that there are so many packages out there, they get updated and deprecated often, and one package update can break the functionality of other packages. Stata, SAS, SPSS, ESRI ArcGIS, would all bundle the supporting packages, so you never have to worry about that. It can be someone's full-time job to make sure the Python environment is stable for a team. We'll try and get around that by using Docker.
 
-## Step 1a: Install Programs
+Go through step-by-step to get set up!
+
+1. [Step 1: Install Programs](#step-1-install-programs)
+1. [Step 2: Fork the Repo](#step-2-fork-the-repo)
+1. [Step 3: Change into your current directory](#step-3-change-into-your-current-directory)
+1. [Step 4: Clone the Repo](#step-4-clone-the-repo)
+1. [Step 5: Build the Docker Container](#step-5-build-the-docker-container)
+
+<br>
+
+## Step 1: Install Programs
 
 1. [Ubuntu](#terminal): Terminal, command line interface
 1. [Docker](#docker) 
@@ -30,6 +40,32 @@ Once Ubuntu is installed:
 * Set a Unix username and password. When you type the password, it won't show up (but that's for security).
 * Type `sudo apt update`
 
+
+**Optional**
+
+To have a nicer prompt in your terminal, with different colors, show our GitHub info, etc:
+
+* Print what's in our bashrc `cat ~/.bashrc`
+* Use vim to change those settings (vim is really clunky to use, so beware!): `vim ~/.bashrc`
+    * Among the clunky way to use vim, here's some to remember: 
+        * capital `I` to enable "insert mode"
+        * right click to paste
+        * `ESC` to leave "insert mode"
+        * `:wq` to exit after editing
+        * As long as you're in "insert mode", you can type and delete as normal.
+        * If you're not in "insert mode", it is more tricky to type and delete characters.
+    * `I` to enable "insert mode"
+    * Let's get a nicer display for our prompt. Scroll down to somewhere in the `bashrc`, maybe towards the end, and paste (right click) this in:
+    ```
+    # Show a nicer prompt.
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export PS1='\[\033[00;32m\]\u\[\033[01;34m\] \w\[\e[31m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+    ```
+    * `ESC` to leave "insert mode"
+    * `:wq` to exit after editing
+    * Refresh and reflect new changes: `source ~/.bashrc` 
+
+
 ### Docker
 
 Docker images are one way to create a standardized Python environment. Unlike proprietary software, such as Stata 14, Stata 15, each version of Stata is bundled with all the commands. With open source languages like Python and R, packages are constantly getting updated / deprecated. One way to get pretty close to a standardized environment in Python is to use a Docker image. 
@@ -38,11 +74,19 @@ Download [Docker for Windows](https://docs.docker.com/docker-for-windows/release
 
 Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/), download 3.1.0.
 
-During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked.
+During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked. You do not need to create a login with Docker to use it.
+
+
+Once it's downloaded, start your Docker and we'll change some settings.
+
+* Right click > Settings > Resources 
+    * WSL Integration: uncheck `Enable integration with my default WSL distro` but check `Enable integration with additional distros` for Ubuntu.
+    * Experimental Features: turn off `Enable cloud experience`
+* Restart Docker
 
 ### GitHub
 
-Go to GitHub and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
+Go to [GitHub](https://github.com/) and create an account. While all the code in the repo is public, you'll be practicing how to use GitHub to collaborate and use version control for your work!
 
 With GitHub, there is the **local** and **remote** version of the repo. 
 * Local: the entire repo, its folders, files that's on your computer
@@ -54,7 +98,7 @@ You will get used to make changes locally, then pushing those changes to the rem
 
 Optionally, a text editor can be installed. Most of our work will be done in Jupyter Notebooks, so a text editor isn't needed. Within our Docker setup, we'll have access a simple text editor.
 
-Installing another text editor can make your life for writing or reading code, as it provides built-in formatting or highlighting. When you're writing Python scripts (.py), Markdown (.md), YAML files (.yml), having a more advanced text editor may make your life easier. 
+Installing another text editor can make your life easier for writing or reading code, as it provides built-in formatting or highlighting. When you're writing Python scripts (.py), Markdown (.md), YAML files (.yml), you might want to have a more advanced text editor handy. 
 
 Some options:
 * [Visual Studio Code](https://code.visualstudio.com/) 
@@ -94,6 +138,8 @@ In Ubuntu:
 * Clone the repo: `git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`. 
     * In the GitHub repo, you'll see a green button `Code`
     * Click on the arrow > HTTPS > URL for GitHub repo
+    * If you get a `Git init: fatal: could not set 'core.filemode' to 'false'` error, try it with a "sudo" in front: `sudo git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
+        * [Debugging error references](./install_errors.md)
 * Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
 ## Step 5: Build the Docker Container
@@ -116,4 +162,4 @@ In Ubuntu:
 
 <br>
 
-Back to [main README](./README.md), [GitHub Workflow](/.github_version_control.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](/.other_resources.md) 
+Back to [main README](./README.md), [GitHub Workflow](./github_version_control.md), [Making a Report](./making_report.md), [Data Pipeline](./data_pipeline.md) or [Other Resources](./other_resources.md) 

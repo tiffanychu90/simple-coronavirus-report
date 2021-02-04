@@ -47,12 +47,16 @@ The next step is the figure out what you want to visualize, and how you need to 
 We could plot cumulative cases, but there are so many other interesting metrics to plot! Also, the CA Department of Public Health guidelines set tier thresholds based on a 7-day rolling average of *new* cases. Additionally, new metrics that help us compare counties across CA and the US is useful; population-adjusted numbers, doubling time, etc are ways to normalize cumulative cases and deaths.
 
 We'll have to derive additional columns:
+
 * new cases (change from the prior day)
 * 7-day rolling average for cases, deaths, new cases, new deaths
 * per capita cases or per capita new cases
 * doubling time 
 * severity
 * percent change
+
+Some examples in action: [Covid Tracking Project by Region](https://covidtracking.com/analysis-updates/outbreaks-ease-across-the-us-but-our-numbers-are-still-very-high-week-in-covid-19-data-jan-28) vs [NYT LA County neighborhoods](https://www.nytimes.com/interactive/2021/01/29/us/los-angeles-county-covid-rates.html) vs [LA County Dept of Public Health Dashboard](http://dashboard.publichealth.lacounty.gov/covid19_surveillance_dashboard/) vs [City of LA Mayor's Office Dashboard](https://corona-virus.la/data)
+
 
 ### Transforming Data
 

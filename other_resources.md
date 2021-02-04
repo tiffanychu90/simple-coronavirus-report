@@ -15,6 +15,9 @@ Python References (Free e-books!):
 * [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 * Note that they wrote entire books using code (Markdown, etc), and it's hosted as a website (maybe even using GitHub pages)! The possibilities are endless!
 
+R References:
+* [RMarkdown docs](https://bookdown.org/yihui/rmarkdown/)
+
 <br>
 
 Back to [main README](./README.md), [Getting Started](./getting_started.md), [GitHub Workflow](./github_version_control.md), [Making a Report](./making_report.md), or [Data Pipeline](./data_pipeline.md)
