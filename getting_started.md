@@ -40,6 +40,32 @@ Once Ubuntu is installed:
 * Set a Unix username and password. When you type the password, it won't show up (but that's for security).
 * Type `sudo apt update`
 
+
+**Optional**
+
+To have a nicer prompt in your terminal, with different colors, show our GitHub info, etc:
+
+* Print what's in our bashrc `cat ~/.bashrc`
+* Use vim to change those settings (vim is really clunky to use, so beware!): `vim ~/.bashrc`
+    * Among the clunky way to use vim, here's some to remember: 
+        * capital `I` to enable "insert mode"
+        * right click to paste
+        * `ESC` to leave "insert mode"
+        * `:wq` to exit after editing
+        * As long as you're in "insert mode", you can type and delete as normal.
+        * If you're not in "insert mode", it is more tricky to type and delete characters.
+    * `I` to enable "insert mode"
+    * Let's get a nicer display for our prompt. Scroll down to somewhere in the `bashrc`, maybe towards the end, and paste (right click) this in:
+    ```
+    # Show a nicer prompt.
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export PS1='\[\033[00;32m\]\u\[\033[01;34m\] \w\[\e[31m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+    ```
+    * `ESC` to leave "insert mode"
+    * `:wq` to exit after editing
+    * Refresh and reflect new changes: `source ~/.bashrc` 
+
+
 ### Docker
 
 Docker images are one way to create a standardized Python environment. Unlike proprietary software, such as Stata 14, Stata 15, each version of Stata is bundled with all the commands. With open source languages like Python and R, packages are constantly getting updated / deprecated. One way to get pretty close to a standardized environment in Python is to use a Docker image. 
