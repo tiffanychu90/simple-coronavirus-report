@@ -2,6 +2,7 @@
 
 * City of LA [COVID-19 Indicators GitHub repo](https://github.com/CityOfLosAngeles/covid19-indicators)
 * City of LA Data Science [Best Practices](https://cityoflosangeles.github.io/best-practices/)
+* [Markdown](https://guides.github.com/features/mastering-markdown/)
 
 Here are other data science workshop curriculum materials.
 
