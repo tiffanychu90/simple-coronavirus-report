@@ -23,7 +23,7 @@ Project Organization
 
 Create a simpler version of what was done in the [City of LA covid19-indicators repo](https://github.com/CityOfLosAngeles/covid19-indicators). 
 
-All the docs to guide you our workshop:
+All the docs to guide you for our workshop:
 * [Getting Started](./getting_started.md)
 * [GitHub Workflow](./github_version_control.md)
 * [Making a Report](./making_report.md)
@@ -39,13 +39,19 @@ Sample reports:
 ## Table of Contents
 
 1. [Data](#data)
-1. [Helpful Hints for Jupyter Notebooks](#helpful-hints)
-1. [Setting up a Conda Environment](#setting-up-a-conda-environment)
 1. [Starting with Docker](#starting-with-docker)
+1. [Helpful Hints for Jupyter Notebooks](#helpful-hints)
 
 ## Data
 
 * US county-level time-series [parquet](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/data/us-county-time-series.parquet)
+    * A local version is checked into `data`
+
+
+## Starting with Docker
+1. Build Docker container: `docker-compose.exe build`
+1. Start Docker container `docker-compose.exe up`
+1. Open Jupyter Lab notebook by typing `localhost:8888/lab/` in the browser or `http://localhost:8888/rstudio` for RStudio.
 
 
 ## Helpful Hints
@@ -112,17 +118,5 @@ gdf = gpd.read_file(CORRECT_URL)
 
 To convert to HTML: `jupyter nbconvert --to html --no-input --no-prompt my-notebook.ipynb`
 
-
-## Setting up a Conda Environment 
-1. `conda create --name my_project_name` 
-1. `source activate my_project_name`
-1. `conda install --file conda-requirements.txt -c conda-forge` 
-1. `pip install requirements.txt`
-
-## Starting with Docker
-1. Start with Steps 1-2 above
-1. Build Docker container: `docker-compose.exe build`
-1. Start Docker container `docker-compose.exe up`
-1. Open Jupyter Lab notebook by typing `localhost:8888/lab/` in the browser or `http://localhost:8888/rstudio` for RStudio.
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
