@@ -25,7 +25,7 @@ Python References (Free e-books!):
 R References:
 
 * [RMarkdown docs](https://bookdown.org/yihui/rmarkdown/)
-
+* UT Austin R data visualization [Class website with slides and Rmd worksheets](https://wilkelab.org/SDS375/) and [GitHub repo](https://github.com/wilkelab/SDS375)
 
 <br>
 
