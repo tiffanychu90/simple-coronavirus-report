@@ -46,6 +46,7 @@ Sample reports:
 
 * US county-level time-series [parquet](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/data/us-county-time-series.parquet)
     * A local version is checked into `data`
+* Other relevant datasets listed in `catalog.yml`
 
 
 ## Starting with Docker

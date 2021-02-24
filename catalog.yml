@@ -18,6 +18,16 @@ sources:
       # Grab the identifier from the items we want.
       items:
         hospital_capacity: 529ac907-6ba1-4cb7-9aae-8966fc96aeef
+  jhu_us_cases_parquet:
+    driver: parquet
+    description: US counties time-series data from Johns Hopkins University.
+    args:
+      urlpath: "../data/us-county-time-series.parquet"
+  jhu_us_cases_csv:
+    driver: csv
+    description: US counties time-series data from Johns Hopkins University.
+    args:
+      urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/us-county-time-series-short.csv
   msa_county_crosswalk:
     driver: csv
     description: Crosswalk linking counties to metropolitan statistical areas.
@@ -27,25 +37,31 @@ sources:
         dtype:
             county_fips: str
             cbsacode: str
-  jhu_cases:
-    driver: parquet
-    description: US counties time-series data from Johns Hopkins University.
-    args:
-      urlpath: "../data/us-county-time-series.parquet"
   # Other useful datasets
+  jhu_global_cases:
+    driver: csv
+    description: Global country time-series data from Johns Hopkins University.
+    args:
+      urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/global-time-series.csv
   ca_hospital_surge_capacity:
     driver: csv
     description: CA county-level time-series data on hospitalizations and surge capacity.
     args:
       urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/ca-hospital-and-surge-capacity.csv
+  la_cases_by_neighborhood:
+    driver: csv
+    description: LA County neighborhood-level case data.
+    args:
+      urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/la-county-neighborhood-time-series.csv
+  # Crosswalks
+  ca_counties_crosswalk:
+    driver: csv
+    description: Crosswalk linking CA counties with population.
+    args:
+      urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/ca_county_pop_crosswalk.csv
   la_neighborhoods_crosswalk:
     driver: csv
     description: Crosswalk linking LA County's countywide statistical areas to larger neighborhoods with population.
     args:
       urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/la_neighborhoods_population_crosswalk.csv
-  la_cases_by_neighborhood:
-    driver: csv
-    description: LA County neighborhood-level case data.
-    args:
-      urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/lacounty-neighborhood-time-series.csv
-      
+  
