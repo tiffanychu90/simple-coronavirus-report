@@ -5,13 +5,18 @@
 ## Workshop Arc
 
 ### Workshop Goals
-1. Progressively working toward 1 work product / deliverable. 
+
+1. Progressively work toward 1 work product / deliverable. 
 
 1. Complete an actual on-the-job assignment expected of a data analyst / data scientist.
 
 1. Understand the data pipeline behind creating a visualization.
 
-1. Learn best practices around reproducibility, using open source software, and 
+1. Learn best practices around reproducibility with open-source software and version control.
+    * Python, Jupyter Notebooks
+    * Docker
+    * GitHub
+    * Markdown
 
 ### Sessions
 
@@ -39,6 +44,9 @@ Practice using GitHub as version control...even for class notes!
 * Evolving public health guidance and standards
     * Visualizations might regional standards to convey how well we're doing
 * Mayor's office approach vs data team's approach of automating a pipeline
+    * First visualization uses time-series data, and each subsequent day, you need to add yesterday's data and recreate the same visualization
+    * Adding 1 day's of data doesn't seem too time-consuming, if you repeated it for 30 days. What about 100 days? What about 200 days? When is it too much?
+    * Our automated daily reports have been emailing since 6/1/2020! Occasionally make changes when public health directives change.
 
 
 ## Overview of Data Science Stack

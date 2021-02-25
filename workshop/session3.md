@@ -26,7 +26,8 @@ Wrap up all the commits from last week into 1 pull request (PR).
 ## Notebook Exercise
 
 Review work from `1-read-in-data.ipynb` and `2-demo-chart.ipynb` and make at least 2 functions.
-Run through `4-geospatial-example.ipynb`
+
+Run through `4-geospatial-example.ipynb`.
 
 References:
 * **[Other Resources](../other_resources.md)** to complete data cleaning.

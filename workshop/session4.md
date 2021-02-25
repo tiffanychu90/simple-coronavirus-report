@@ -19,12 +19,16 @@ Wrap up all the commits from last week into 1 pull request (PR).
 
 ## Notebook Exercise
 
-Run through `5-full-report.ipynb`
+Run through `5-full-report.ipynb`.
+
 Demo using terminal to do `jupyter nbconvert` to convert a Jupyter Notebok into HTML or pdf.
-Run through `automate.py` and `report.py`
+
+Run through `automate.py` and `report.py`.
 
 If time permits:
+
 Run through `A-county-charts.Rmd` and `iterate.R` and `D-sample-report.Rmd`.
+
 
 |  | Python | R |
 | ---| ---- | --- |
@@ -34,11 +38,12 @@ Run through `A-county-charts.Rmd` and `iterate.R` and `D-sample-report.Rmd`.
 | individual county report | N/A | `A-county-charts.Rmd` (pdf), `B-county-charts-html.Rmd` (HTML) |
 | report with hyperlinks to various places | [CA](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/notebooks/ca-counties.ipynb) or [US](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/notebooks/us-counties.ipynb) | N/A |
 | pdf formatting | [PDFviaHTML](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/main.py) | `preamble.tex` invoked in all Rmd |
-|
+
 
 ## To Do 
 1. Make progress on `5-full-report.ipynb` or create new notebook.
 1. Make at least 1 more commit.
 1. Merge in any open PRs, clean up your merged branches, clean up your repo.
-1. Open a GitHub issue on MY repo, embed the URL of your report (HTML or PDF), and tag me. Your report should live on the `master` branch, because your PRs should be merged in.
+1. Open a GitHub issue on **MY** repo, embed the URL of your report (HTML or PDF), and tag me. Your report should be on the `master` branch, because your PRs should be merged in.
+    * Hint: Markdown syntax for URLs is `[DISPLAY NAME](URL_LINK)`
 

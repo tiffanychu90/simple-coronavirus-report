@@ -3,7 +3,9 @@
 ## Overview of Data Pipeline
 
 * Anything you want to do repeatedly....try to automate as much as possible!
-* Conceptually identify which components you can automate now vs which ones need enterprise infrastructure / resources
+
+* Conceptually identify which components you can automate now vs which ones require enterprise infrastructure / resources
+
 * Naming convention of files in the repo:
     * 1-, 2-, 3-, etc are all Jupyter notebooks
     * A-, B-, C-, etc are all RMarkdown docs
@@ -12,19 +14,20 @@
 
 ## Notebook Exercise
 
-Run through `1-read-in-data.ipynb`
+Run through `1-read-in-data.ipynb`.
 
-Run through `2-demo-chart.ipynb`
+Run through `2-demo-chart.ipynb`.
 
 Demo GitHub workflow to save any changes.
-    * Pull from master: `git pull origin master`
-    * Checkout new branch: `git checkout -b clean-data`
-    * Make changes locally
-    * Stage new changes: `git add notebooks/1-read-in-data.ipynb`
-    * Commit the change: `git commit -m "Filtering data"`
-    * Push to new branch: `git push origin clean-data`
-    * Create pull request
-    * Merge 
+
+* Pull from master: `git pull origin master`
+* Checkout new branch: `git checkout -b clean-data`
+* Make changes locally
+* Stage new changes: `git add notebooks/1-read-in-data.ipynb`
+* Commit the change: `git commit -m "Filtering data"`
+* Push to new branch: `git push origin clean-data`
+* Create pull request
+* Merge 
 
 References:
 * **[Other Resources](../other_resources.md)** to complete data cleaning.
