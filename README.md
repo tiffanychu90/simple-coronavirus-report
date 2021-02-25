@@ -29,6 +29,7 @@ All the docs to guide you for our workshop:
 * [Making a Report](./making_report.md)
 * [Data Pipeline](./data_pipeline.md)
 * [Other Resources](./other_resources.md)
+* Workshop Session Outlines: [1](./workshop/session1.md), [2](./workshop/session2.md), [3](./workshop/session3.md), [4](./workshop/session4.md)
 
 Sample reports: 
 * **CA COUNTIES REPORT:** [https://tinyurl.com/cacovidtrends](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)

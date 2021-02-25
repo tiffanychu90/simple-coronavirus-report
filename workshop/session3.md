@@ -25,8 +25,8 @@ Wrap up all the commits from last week into 1 pull request (PR).
 
 ## Notebook Exercise
 
-Run through `1-read-in-data.ipynb` and `utils.py`.
-Run through `2-demo-chart.ipynb`.
+Review work from `1-read-in-data.ipynb` and `2-demo-chart.ipynb` and make at least 2 functions.
+Run through `4-geospatial-example.ipynb`
 
 References:
 * **[Other Resources](../other_resources.md)** to complete data cleaning.
@@ -35,4 +35,5 @@ References:
 1. Make progress on `2-demo-chart.ipynb`, or create new notebook.
 1. Make at least 1 more commit.
 1. Turn last week's work in data cleaning into a function and move it into `utils.py`.
+1. Turn last week's work in making a chart into a function and move it into `chart_utils.py`.
 

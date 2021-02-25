@@ -48,7 +48,7 @@ To have a nicer prompt in your terminal, with different colors, show our GitHub 
 
 * Print what's in our bashrc `cat ~/.bashrc`
 * Use vim to change those settings (vim is really clunky to use, so beware!): `vim ~/.bashrc`
-    * Among the clunky way to use vim, here's some to remember: 
+    * Some of the clunky and unintuitive ways to use vim (these are tips, not instructions for displaying a nicer prompt): 
         * capital `I` to enable "insert mode"
         * right click to paste
         * `ESC` to leave "insert mode"
@@ -56,7 +56,7 @@ To have a nicer prompt in your terminal, with different colors, show our GitHub 
         * As long as you're in "insert mode", you can type and delete as normal.
         * If you're not in "insert mode", it is more tricky to type and delete characters.
     * `I` to enable "insert mode"
-    * Let's get a nicer display for our prompt. Scroll down to somewhere in the `bashrc`, maybe towards the end, and paste (right click) this in:
+    * Let's get a nicer display for our prompt. Scroll down, by clicking the "down arrow", to somewhere in the `bashrc`, maybe towards the end, and paste (right click) this in:
     ```
     # Show a nicer prompt.
     export GIT_PS1_SHOWDIRTYSTATE=1
@@ -65,6 +65,7 @@ To have a nicer prompt in your terminal, with different colors, show our GitHub 
     * `ESC` to leave "insert mode"
     * `:wq` to exit after editing
     * Refresh and reflect new changes: `source ~/.bashrc` 
+    * To see what's in our `bashrc`, to double check the nicer prompt code is there: `cat ~/.bashrc`
 
 
 ### Docker
@@ -75,15 +76,21 @@ Download [Docker for Windows](https://docs.docker.com/docker-for-windows/release
 
 Download [Docker for Macs](https://docs.docker.com/docker-for-mac/release-notes/), download 3.1.0.
 
-During the install, make sure both `Install required Windows components for WSL 2` and `Add shortcut to desktop` are checked. You do not need to create a login with Docker to use it.
-
+During the install:
+* Check `Install required Windows components for WSL 2` 
+* Check `Add shortcut to desktop` 
+* You do **not** need to create a login with Docker to use it.
 
 Once it's downloaded, start your Docker and we'll change some settings.
 
 * Right click > Settings > Resources 
-    * WSL Integration: uncheck `Enable integration with my default WSL distro` but check `Enable integration with additional distros` for Ubuntu.
+    * WSL Integration: 
+        * Uncheck `Enable integration with my default WSL distro` 
+        * Check `Enable integration with additional distros` for Ubuntu.
     * Experimental Features: turn off `Enable cloud experience`
 * Restart Docker
+
+If you don't start Docker at startup (recommended, especially if you're not actively using Docker all the time), then you have to remember to start Docker. Once you start it, you're able to restart / change settings by finding the Docker "whale" icon in the System Tray (mini icons in bottom right corner).
 
 ### GitHub
 
@@ -141,7 +148,8 @@ In Ubuntu:
     * Click on the arrow > HTTPS > URL for GitHub repo
     * If you get a `Git init: fatal: could not set 'core.filemode' to 'false'` error, try it with a "sudo" in front: `sudo git clone https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
         * [Debugging error references](./install_errors.md)
-* Add and set your remote repository (call `origin`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
+* Once cloned, move from the `GitHub` folder into the `simple-coronavirus-report` folder: `cd simple-coronavirus-report`
+* Add and set your remote repository (by convention, it is called `origin` or `upstream`): `git remote add origin https://github.com/YOUR-USERNAME/simple-coronavirus-report.git`
 
 ## Step 5: Build the Docker Container
 
@@ -152,14 +160,21 @@ The relevant files in the repo to have this Docker container set up are: `Docker
 You can certainly do work without Docker, but if you plan on sharing code, others might not be able to run it (due to lack of packages or different package versions). It is best to have a Docker setup, but it's also a lot of work to set it up and maintain.
 
 In Ubuntu:
-* Change into the repo's directory (so far, we're in the GitHub folder): `cd simple-coronavirus-report` 
+* Make sure we're in the repo. If we're not: `cd simple-coronavirus-report` 
 * Once we're in this repo, we can run files within this repo, such as the files needed to build the Docker container.
 * Build the Docker container (only necessary for the first time): `docker-compose.exe build`
+    * Building the Docker container will take awhile (~10 min)
+    * If it's hanging too long, you can press the "down arrow" and see if that helps it move on
+    * To know when it's done building, you should see: 
+        ```
+        Successfully built CONTAINER_ID
+        SUccessfully tagged simple_coronavirus_report:latest
+        ```
 * Start Docker container: `docker-compose.exe up`
 * Navigate to browser and open Jupyter Lab notebook by typing `localhost:8888/lab/` or `http://localhost:8888/rstudio` for RStudio.
     * ...DO ALL YOUR WORK LOCALLY....
 * When you're done for the day, `CTRL+C` to stop the Docker container from running, then stop Docker container: `docker-compose.exe down`
-* THe next time you want to do work, repeat the `docker-compose.exe up`, open Jupyter Lab, then `docker-compose.exe down`
+* THe next time you want to do work, start your Docker, then in Ubuntu, repeat the `docker-compose.exe up`, open Jupyter Lab, then `docker-compose.exe down`
 
 
 ## Step 6: Add Credentials
