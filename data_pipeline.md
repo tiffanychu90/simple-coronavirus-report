@@ -19,7 +19,7 @@ Dashboards have become extremely common in the data science / visualization worl
 
 Identify where your data is coming from, and this should be a canonical data source.
 
-With coronavirus data, a couple of sources emerged as reputable, canonical data sources in March and April. These are Johns Hopkins University (JHU), Covid Tracking Project, and the New York Times. 
+With coronavirus data, a couple of sources emerged as reputable, canonical data sources in March and April. These are [Johns Hopkins University (JHU)](https://github.com/CSSEGISandData/COVID-19), [Covid Tracking Project](https://covidtracking.com/data), and the [New York Times](https://github.com/nytimes/covid-19-data). 
 
 This repo uses JHU data. JHU provided county-level time-series data as ESRI layers and CSVs in their GitHub repo. CSVs can be read directly in GitHub, and this became an easy way for us to pull their CSV time-series file.
 
