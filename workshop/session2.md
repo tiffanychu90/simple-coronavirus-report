@@ -4,6 +4,9 @@
 
 * Anything you want to do repeatedly....try to automate as much as possible!
 * Conceptually identify which components you can automate now vs which ones need enterprise infrastructure / resources
+* Naming convention of files in the repo:
+    * 1-, 2-, 3-, etc are all Jupyter notebooks
+    * A-, B-, C-, etc are all RMarkdown docs
 
 **[Data Pipeline docs](../data_pipeline.md)**
 

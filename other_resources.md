@@ -3,6 +3,7 @@
 * City of LA [COVID-19 Indicators GitHub repo](https://github.com/CityOfLosAngeles/covid19-indicators)
 * City of LA Data Science [Best Practices](https://cityoflosangeles.github.io/best-practices/)
 * [Markdown](https://guides.github.com/features/mastering-markdown/)
+* Urban Institute's [Index of Data Science Tools](https://github.com/UrbanInstitute/data-science-index)
 
 Here are other data science workshop curriculum materials on GitHub.
 
@@ -26,6 +27,7 @@ R References:
 
 * [RMarkdown docs](https://bookdown.org/yihui/rmarkdown/)
 * UT Austin R data visualization [Class website with slides and Rmd worksheets](https://wilkelab.org/SDS375/) and [GitHub repo](https://github.com/wilkelab/SDS375)
+* [Urban Institute's iterated RMarkdown factsheets](https://github.com/UrbanInstitute/rmarkdown-factsheets)
 
 <br>
 
