@@ -28,6 +28,9 @@ sources:
     description: US counties time-series data from Johns Hopkins University.
     args:
       urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/us-county-time-series-short.csv
+      csv_kwargs:
+          dtype:
+              fips: str
   msa_county_crosswalk:
     driver: csv
     description: Crosswalk linking counties to metropolitan statistical areas.
@@ -43,6 +46,9 @@ sources:
     description: Global country time-series data from Johns Hopkins University.
     args:
       urlpath: https://raw.githubusercontent.com/CityOfLosAngeles/covid19-indicators/master/data/global-time-series.csv
+      csv_kwargs:
+          dtype:
+              number_of_recovered: float
   ca_hospital_surge_capacity:
     driver: csv
     description: CA county-level time-series data on hospitalizations and surge capacity.

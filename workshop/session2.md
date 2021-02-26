@@ -9,7 +9,7 @@
 * Naming convention of files in the repo:
     * 1-, 2-, 3-, etc are all Jupyter notebooks
     * A-, B-, C-, etc are all RMarkdown docs
-
+    
 **[Data Pipeline docs](../data_pipeline.md)**
 
 ## Notebook Exercise
