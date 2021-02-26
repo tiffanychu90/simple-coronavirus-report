@@ -51,9 +51,13 @@ Sample reports:
 
 
 ## Starting with Docker
-1. Build Docker container: `docker-compose.exe build`
+1. Build Docker container: `docker-compose.exe build` (only necessary for 1st time)
 1. Start Docker container `docker-compose.exe up`
+    * The error `docker.errors.DockerException: Error while fetching server API version: 500 Server Error: Internal Serve
+r Error ("b'open \\\\.\\pipe\\docker_engine_linux: The system cannot find the file specified.'")
+[16928] Failed to execute script docker-compose` means you need to make sure Docker has finished starting up and is currently running.
 1. Open Jupyter Lab notebook by typing `localhost:8888/lab/` in the browser or `http://localhost:8888/rstudio` for RStudio.
+1. Stop Docker container with CTRL+C and then `docker-compose.exe down`
 
 
 ## Helpful Hints
