@@ -29,6 +29,7 @@ All the docs to guide you for our workshop:
 * [Making a Report](./making_report.md)
 * [Data Pipeline](./data_pipeline.md)
 * [Other Resources](./other_resources.md)
+* Workshop Session Outlines: [1](./workshop/session1.md), [2](./workshop/session2.md), [3](./workshop/session3.md), [4](./workshop/session4.md)
 
 Sample reports: 
 * **CA COUNTIES REPORT:** [https://tinyurl.com/cacovidtrends](https://cityoflosangeles.github.io/covid19-indicators/ca-county-trends.html)
@@ -46,12 +47,17 @@ Sample reports:
 
 * US county-level time-series [parquet](https://github.com/CityOfLosAngeles/covid19-indicators/blob/master/data/us-county-time-series.parquet)
     * A local version is checked into `data`
+* Other relevant datasets listed in `catalog.yml`
 
 
 ## Starting with Docker
-1. Build Docker container: `docker-compose.exe build`
+1. Build Docker container: `docker-compose.exe build` (only necessary for 1st time)
 1. Start Docker container `docker-compose.exe up`
+    * The error `docker.errors.DockerException: Error while fetching server API version: 500 Server Error: Internal Serve
+r Error ("b'open \\\\.\\pipe\\docker_engine_linux: The system cannot find the file specified.'")
+[16928] Failed to execute script docker-compose` means you need to make sure Docker has finished starting up and is currently running.
 1. Open Jupyter Lab notebook by typing `localhost:8888/lab/` in the browser or `http://localhost:8888/rstudio` for RStudio.
+1. Stop Docker container with CTRL+C and then `docker-compose.exe down`
 
 
 ## Helpful Hints

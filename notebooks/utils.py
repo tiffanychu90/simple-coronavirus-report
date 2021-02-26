@@ -47,7 +47,7 @@ def calculate_rolling_average(df):
 # Clean the JHU county data at once
 def clean_jhu():
     # Import data
-    df = catalog.jhu_cases.read()
+    df = catalog.jhu_us_cases_parquet.read()
     
     # Get some new columns
     df = df.assign(
