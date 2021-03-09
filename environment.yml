@@ -1,0 +1,40 @@
+name: example-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - pip
+  - altair
+  - altair_saver
+  - nodejs
+  - numpy
+  - scipy
+  - matplotlib
+  - s3fs
+  - papermill
+  - geoalchemy2
+  - openpyxl
+  - cartopy
+  - scikit-learn
+  - geopandas
+  - intake
+  - intake-parquet
+  #r-arrow
+  #r-aws.s3
+  #r-base
+  #r-kableextra
+  #r-rmarkdown
+  #r-irkernel
+  #r-reticulate
+  #r-tidyverse
+  - pyarrow
+  #python-snappy
+  - pip:
+    - flake8
+    - intake-dcat
+    - intake-geopandas
+    - jupyterlab>=1.0a3
+    - descartes
+    - folium
+    - python-dotenv
