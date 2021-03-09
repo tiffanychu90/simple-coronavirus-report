@@ -13,15 +13,3 @@ services:
       - JUPYTER_RUNTIME_DIR=/tmp/runtime
       - JUPYTER_ENABLE_LAB=1
     command: "jupyter-lab --no-browser --ip=\"*\" --allow-root --port=8888 --NotebookApp.notebook_dir=/home/jovyan --LabApp.token=\"\" --LabApp.password=\"\""
-  rstudio:
-    build: ./
-    image: simple_coronavirus_report
-    container_name: simple_coronavirus_report_rstudio
-    volumes:
-      - ./:/home/jovyan
-    ports:
-      - "8787:8787"
-    environment:
-      - JUPYTER_RUNTIME_DIR=/tmp/runtime
-      - JUPYTER_ENABLE_LAB=1
-    command: "jupyter-lab --no-browser --ip=\"*\" --allow-root --port=8787 --NotebookApp.notebook_dir=/home/jovyan --LabApp.token=\"\" --LabApp.password=\"\" --NotebookApp.default_url=\"/rstudio\""
