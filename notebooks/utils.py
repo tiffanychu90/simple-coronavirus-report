@@ -6,6 +6,8 @@ import datetime
 import intake
 import pandas as pd
 
+import useful_dict
+
 catalog = intake.open_catalog("../catalog.yml")
 
 """
@@ -17,7 +19,6 @@ In this case, for every state's full name (key), the abbreviation (value) is lis
 To use:
 useful_dict.us_state_abbrev 
 """
-import useful_dict
 
 # Define some default parameters to use across notebooks
 fulldate_format = "%-m/%-d/%y"
@@ -46,8 +47,20 @@ def calculate_rolling_average(df):
 
 # Clean the JHU county data at once
 def clean_jhu():
-    # Import data
-    df = catalog.jhu_us_cases_parquet.read()
+    # Import data   
+    data_part1 = catalog.jhu_us_cases_parquet.read()
+    data_part2 = catalog.jhu_us_cases_csv.read()
+    
+
+    # Append and drop duplicates
+    df = (data_part1.append(
+        data_part2.assign(date=pd.to_datetime(data_part2.date)), 
+        sort=False)
+      .sort_values(["state", "fips", "date"])
+      .drop_duplicates(subset=["county", "state", "fips", "date", "cases"])
+      .reset_index(drop=True)
+     )
+    
     
     # Get some new columns
     df = df.assign(
