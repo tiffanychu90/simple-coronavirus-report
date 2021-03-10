@@ -1,8 +1,12 @@
-name: example-environment
+name: simple-coronavirus-environment
 channels:
   - conda-forge
+  - defaults
 dependencies:
-  - python==3.8.5
+  - python
+  - jupyterlab=1.0
+  - numpy
+  - pandas>=1.0
   - numpy
   - pip
   - altair
@@ -26,7 +30,6 @@ dependencies:
     - flake8
     - intake-dcat
     - intake-geopandas
-    - jupyterlab>=1.0a3
     - descartes
     - folium
     - python-dotenv
