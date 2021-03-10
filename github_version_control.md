@@ -23,6 +23,8 @@ In Ubuntu:
 
 When you've done some work locally, you want to save a version in the remote repo. Think of this as "saving" in your Word Doc, Google Doc, etc. With GitHub, you have explicitly "save" by **committing** the changes. Otherwise, your changes are saved locally only. Think of this as creating checkpoints in your code, and you can always revert back any versioned changes in the remote repo.
 
+If you are using Binder, you need these [extra steps](./binder_workflow.md) before you do your `git add`, `git commit`, `git push`.
+
 In Ubuntu:
 * Push your local changes to the remote: `git add notebooks/1-read-in-data.ipynb`. For multiple files, do `git add notebooks/1-read-in-data.ipynb utils.py`
 * Commit the change by including a short commit message: `git commit -m "Exploratory analysis"`
