@@ -23,7 +23,12 @@ Project Organization
 
 Create a simpler version of what was done in the [City of LA covid19-indicators repo](https://github.com/CityOfLosAngeles/covid19-indicators). 
 
+<<<<<<< HEAD
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tiffanychu90/simple-coronavirus-report/binder)
+=======
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tiffanychu90/simple-coronavirus-report/binder?urlpath=lab)
+
+>>>>>>> 2f154848f15c52250909d817ec38ce0cbf1a027d
 
 All the docs to guide you for our workshop:
 * [Getting Started](./getting_started.md)
