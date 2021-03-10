@@ -31,6 +31,7 @@ sources:
       csv_kwargs:
           dtype:
               fips: str
+              date: str
   msa_county_crosswalk:
     driver: csv
     description: Crosswalk linking counties to metropolitan statistical areas.
