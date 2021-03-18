@@ -9,7 +9,7 @@ We'll describe these steps generally, and apply it specifically to coronavirus d
 Dashboards have become extremely common in the data science / visualization world as a means to communicate with the public. The most common dashboards out there (Tableau, PowerBI, ESRI) are easy to spin up, but limited when you want to do more complicated data processing or more complicated charts. Most of the time, you need to offload all your data processing elsewhere (Python, R, Stata, etc) and connect your dashboard to the cleaned data to visualize. Dashboards are great for displaying counts, but what about cases when you want some simple analysis?
 
 1. [Connecting to Data Sources](#connecting-to-data-sources)
-1. [Data Cleaning](data-cleaning)
+1. [Data Cleaning](#data-cleaning)
 1. [Data Wrangling and Transforming](#data-wrangling-and-transforming)
 1. [Visualizing](#visualizing)
 1. [Publishing the Report](#publishing-the-report)
